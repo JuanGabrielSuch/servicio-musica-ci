@@ -52,13 +52,13 @@ public class BibliotecaMusicalTest {
 
     // ==================== 4 CASOS DE FALLO (FORZADOS) ====================
 
-    @Test
+   // @Test
     public void testAssertNullFallo() {
         // Va a fallar porque el catálogo se inicializa vacío en el constructor, no es null
         assertNull(biblioteca.getCatalogoCanciones());
     }
 
-    @Test
+    //@Test
     public void testAssertSameFallo() {
         Cancion cancionDuplicada = new Cancion("Bohemian Rhapsody", "Queen", 355);
         // Va a fallar porque "assertSame" mira si son exactamente el mismo objeto en la memoria,
@@ -66,13 +66,13 @@ public class BibliotecaMusicalTest {
         assertSame(cancion1, cancionDuplicada);
     }
 
-    @Test
+ //   @Test
     public void testAssertNotSameFallo() {
         // Va a fallar porque estamos diciendo que NO son el mismo objeto, pero en verdad sí lo son
         assertNotSame(usuarioPremium, usuarioPremium);
     }
 
-    @Test
+   // @Test
     public void testAssertArrayEqualsFallo() {
         String[] esperado = {"Bohemian Rhapsody"};
         String[] resultado = {"Another One Bites The Dust"};
